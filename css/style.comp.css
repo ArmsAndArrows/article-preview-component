@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.two-boxes {
+  position: relative;
+}
+
+.card {
+  max-height: 100%;
+  margin: 7.3rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 31.25em) {
+  .card {
+    margin: 7.3rem;
+  }
+}
+@media only screen and (min-width: 46.875em) {
+  .card {
+    flex-direction: row;
+    margin: 18% auto;
+    width: 73.8rem;
+  }
+}
+@media only screen and (min-width: 87.5em) {
+  .card {
+    margin: 18% 24.6%;
+  }
+}
+.card__pic {
+  width: 80rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 60% 25%;
+  filter: brightness(110%) contrast(90%);
+}
+@media only screen and (min-width: 31.25em) {
+  .card__pic {
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 87.5em) {
+  .card__pic {
+    height: 28rem;
+    width: 28.5rem;
+    object-position: 0%;
+    object-fit: cover;
+  }
+}
+.card__content {
+  padding: 3.6rem 3.15rem 2rem;
+}
+@media only screen and (min-width: 87.5em) {
+  .card__content {
+    padding: 3.2rem 3.9rem 2.2rem;
+  }
+}
+.card__heading {
+  font-size: 1.65rem;
+  line-height: 1.49;
+}
+@media only screen and (min-width: 87.5em) {
+  .card__heading {
+    font-size: 2rem;
+    letter-spacing: 0.03rem;
+  }
+}
+.card__paragraph {
+  margin-top: 1.2rem;
+  line-height: 1.53;
+  word-spacing: 0.087rem;
+  color: hsl(214, 17%, 51%);
+}
+.card__userbox {
+  padding: 1.4rem 3.15rem 2rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: max-content 1fr max-content;
+  position: relative;
+  z-index: 1;
+}
+.card__userbox--1 {
+  display: grid;
+}
+.card__userbox--2 {
+  display: grid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 7.25rem;
+  grid-template-columns: min-content repeat(2, max-content);
+  justify-content: space-between;
+  background-color: hsl(217, 19%, 35%);
+  grid-column-gap: 1rem;
+  display: none;
+}
+.card__userbox--2 a {
+  align-self: center;
+}
+@media only screen and (min-width: 46.875em) {
+  .card__userbox--2 {
+    align-content: center;
+    padding: 2rem 3rem;
+    justify-content: center;
+    height: 4rem;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    top: auto;
+    transform: translate(0.4rem, -11rem);
+    border-radius: 1rem;
+    display: none;
+  }
+  .card__userbox--2:after {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    top: 50%;
+    left: 74.5%;
+    transform: translateY(1.3rem) rotate(45deg);
+  }
+}
+@media only screen and (min-width: 46.875em) and (min-width: 87.5em) {
+  .card__userbox--2 {
+    transform: translate(0rem, -10rem);
+  }
+}
+.card__userbox--2 p {
+  justify-self: center;
+  margin-right: auto;
+  align-self: center;
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 0.5rem;
+}
+.card__userbox--2 .social-icon {
+  display: grid;
+  align-self: center;
+  margin-right: 1.5rem;
+}
+@media only screen and (min-width: 46.875em) {
+  .card__userbox--2 .social-icon {
+    margin: 0.5rem;
+  }
+}
+@media only screen and (min-width: 87.5em) {
+  .card__userbox {
+    margin-top: -1.7rem;
+    padding: 2rem 4rem 2rem;
+  }
+}
+.card__user-img {
+  width: 3.85rem;
+  border-radius: 50%;
+}
+.card__info-box {
+  margin-left: 2rem;
+}
+.card__icon-box {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.card__name {
+  font-size: 1.3rem;
+}
+.card__date {
+  color: hsl(214, 17%, 51%);
+}
+
+.btn-1__img {
+  background-color: hsl(210, 46%, 95%);
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+.btn-1__img:hover {
+  background-color: hsl(212, 23%, 69%);
+  transform: translateY(-1px);
+}
+.btn-1__img:hover:active {
+  transform: translateY(1px);
+}
+.btn-1__img--active {
+  background-color: hsl(212, 23%, 69%);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.btn-2__img {
+  background-color: hsl(212, 23%, 69%);
+  fill: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 46.875em) {
+  .btn-2__img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.comp.css.map */

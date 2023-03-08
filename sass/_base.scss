@@ -1,0 +1,274 @@
+///Colors
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0, 0, 0);
+
+$color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+$color-desaturated-dark-blue: hsl(214, 17%, 51%);
+$color-grayish-blue: hsl(212, 23%, 69%);
+$color-light-grayish-blue: hsl(210, 46%, 95%);
+///Fonts
+
+$ft-bold: 700;
+$ft-normal: 500;
+
+///SCR
+$bp-largest: 87.5em; ///1400px
+$bp-large: 46.875em; ///750px
+$bp-medium: 31.25em; ///500px
+
+///RESETS
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+///BEGIN
+///
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; ////defines
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.3rem;
+    background-color: $color-light-grayish-blue;
+}
+
+.two-boxes {
+    position: relative;
+}
+.card {
+    max-height: 100%;
+    margin: 7.3rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: 1rem;
+    overflow: hidden;
+    @media only screen and (min-width: $bp-medium) {
+        margin: 7.3rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        flex-direction: row;
+        margin: 18% auto;
+        width: 73.8rem;
+    }
+    @media only screen and (min-width: $bp-largest) {
+        margin: 18% 24.6%;
+    }
+
+    &__pic {
+        width: 80rem;
+        height: 20rem;
+        object-fit: cover;
+        object-position: 60% 25%;
+        filter: brightness(110%) contrast(90%);
+        @media only screen and (min-width: $bp-medium) {
+            height: 30rem;
+        }
+
+        @media only screen and (min-width: $bp-largest) {
+            height: 28rem;
+            width: 28.5rem;
+            object-position: 0%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        padding: 3.6rem 3.15rem 2rem;
+        @media only screen and (min-width: $bp-largest) {
+            padding: 3.2rem 3.9rem 2.2rem;
+        }
+    }
+    &__heading {
+        font-size: 1.65rem;
+        line-height: 1.49;
+        @media only screen and (min-width: $bp-largest) {
+            font-size: 2rem;
+            letter-spacing: 0.03rem;
+        }
+    }
+    &__paragraph {
+        margin-top: 1.2rem;
+        line-height: 1.53;
+        word-spacing: 0.087rem;
+        color: $color-desaturated-dark-blue;
+    }
+
+    ///bottom part with user
+    &__userbox {
+        padding: 1.4rem 3.15rem 2rem;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: max-content 1fr max-content;
+        position: relative;
+
+        z-index: 1;
+        &--1 {
+            display: grid;
+        }
+        &--2 {
+            display: grid;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 7.25rem;
+            grid-template-columns: min-content repeat(2, max-content);
+            justify-content: space-between;
+            background-color: $color-very-dark-grayish-blue;
+            grid-column-gap: 1rem ;
+
+            display: none;
+            a {
+                align-self: center;
+            }
+
+            @media only screen and (min-width: $bp-large) {
+                align-content: center;
+                padding: 2rem 3rem;
+                justify-content: center;
+                height: 4rem;
+                bottom: auto;
+                left: auto;
+                right: 0;
+                top: auto;
+                transform: translate(0.4rem, -11rem);
+                // position: fixed;
+                border-radius: 1rem;
+                display: none;
+                &:after {
+                    content: "";
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background-color: $color-very-dark-grayish-blue;
+                    position: absolute;
+                    top: 50%;
+                    left: 74.5%;
+                    transform: translateY(1.3rem) rotate(45deg);
+                }
+                @media only screen and (min-width: $bp-largest) {
+                    transform: translate(0rem, -10rem);
+                    // padding: 2rem;
+                }
+            }
+            p {
+                justify-self: center;
+                margin-right: auto;
+                align-self: center;
+                color: $color-grayish-blue;
+                letter-spacing: 0.5rem;
+            }
+            .social-icon {
+                display: grid;
+
+                align-self: center;
+                margin-right: 1.5rem;
+                @media only screen and (min-width: $bp-large) {
+                    margin: 0.5rem;
+                }
+            }
+        }
+
+        @media only screen and (min-width: $bp-largest) {
+            margin-top: -1.7rem;
+            padding: 2rem 4rem 2rem;
+        }
+    }
+    &__user-img {
+        width: 3.85rem;
+        border-radius: 50%;
+    }
+    &__info-box {
+        margin-left: 2rem;
+    }
+    &__icon-box {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__name {
+        font-size: 1.3rem;
+    }
+
+    &__date {
+        color: $color-desaturated-dark-blue;
+    }
+}
+
+.btn-1 {
+
+    &__img {
+        background-color: $color-light-grayish-blue;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all 0.2s;
+        &:hover{
+            background-color: $color-grayish-blue;
+            transform: translateY(-1px);
+        &:active{
+            transform: translateY(1px);
+        }
+    
+        }
+        &--active {
+            background-color: $color-grayish-blue;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+    }
+}
+.btn-2 {
+    &__img {
+        background-color: $color-grayish-blue;
+        fill: $color-white;
+        padding: 1rem;
+
+        border-radius: 50%;
+        @media only screen and (min-width: $bp-large) {
+            display: none;
+        }
+    }
+}
